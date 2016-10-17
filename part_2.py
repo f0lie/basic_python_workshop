@@ -7,6 +7,7 @@ velo = 1
 for i in range(10):
     print(pos, i)
     pos += velo
+# There is also an effect of increased readability
 
 # This is the final value of pos
 print(pos, i)
