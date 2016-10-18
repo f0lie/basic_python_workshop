@@ -6,6 +6,12 @@ class Point():
         self.x = x
         self.velo = velo
 
+    def move(self):
+        self.x += self.velo
+
+    def print(self):
+        print(self.x, self.velo)
+
 line = 10*[' ']
 
 point = Point(0,1)
@@ -14,7 +20,6 @@ for i in range(10):
     line[point.x] = '*'
     print("".join(line))
     line[point.x] = ' '
+    point.move()
 
-    point.x += point.velo
-
-print(point.x, point.velo)
+point.print()
