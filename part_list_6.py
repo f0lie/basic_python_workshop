@@ -8,6 +8,7 @@ velo_2 = -1
 
 line = 10*[' ']
 
+# The code is beginning to be clustered and hard to read
 for i in range(10):
     line[pos_1] = '*'
     line[pos_2] = '*'

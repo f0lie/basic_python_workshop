@@ -1,3 +1,5 @@
+# Without writing documentation we can also improve readbility
+
 class Point():
     def __init__(self, x, velo):
         self.x = x
@@ -8,8 +10,6 @@ class Point():
 
     def print(self):
         print(self.x, self.velo)
-
-line = 10*[' ']
 
 class Line():
     def __init__(self, size, points=None):

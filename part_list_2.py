@@ -13,6 +13,7 @@ print(pos[0])
 print(pos[1])
 
 # Now we can modify pos as a pair of numbers
+# Unforturately its not very readable
 for i in range(10):
     print(pos)
     pos[0] += velo[0]

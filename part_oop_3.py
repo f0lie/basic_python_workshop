@@ -25,7 +25,6 @@ for i in range(10):
     # note how its more readible
     point_1.move()
     point_2.move()
-    
 
 point_1.print()
 point_2.print()

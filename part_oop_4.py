@@ -9,9 +9,7 @@ class Point():
     def print(self):
         print(self.x, self.velo)
 
-line = 10*[' ']
-
-# You can have liss as attitude too
+# You can have lists as attitude too
 class Line():
     def __init__(self, size, points=None):
         self.line = size*[' ']
@@ -24,6 +22,7 @@ class Line():
 # We store points in a list within list so its easier to add more points
 line = Line(10, [Point(0,1), Point(9,-1)])
 
+# While the code is a bit noiser, the intents are clear
 for i in range(10):
     # We can directly loop over items in a list without having to deal with indexes
     for point in line.points:
@@ -34,7 +33,6 @@ for i in range(10):
 
     for point in line.points:
         point.move()
-    
 
 for point in line.points:
     point.print()
