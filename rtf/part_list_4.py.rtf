@@ -1,0 +1,19 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red64\green128\blue128;\red186\green33\blue33;\red0\green0\blue255;\red0\green128\blue0;\red187\green102\blue136;\red0\green68\blue221;\red102\green102\blue102;\red170\green34\blue255;\red160\green160\blue0;\red187\green102\blue34;\red0\green160\blue0;\red25\green23\blue124;\red187\green187\blue187;\red160\green0\blue0;\red128\green0\blue128;\red176\green0\blue64;\red0\green0\blue128;\red210\green65\blue58;\red153\green153\blue153;\red125\green144\blue41;\red136\green136\blue136;\red136\green0\blue0;\red188\green122\blue0;\red255\green0\blue0;}\f0 pos {\cf7 =} {\cf7 0}\par
+velo {\cf7 =} {\cf7 1}\par
+\par
+line {\cf7 =} {\cf7 10}{\cf7 *}[{\cf2 '}{\cf2  }{\cf2 '}]\par
+\par
+{\cf1\i # We can use the index of an line as the positions on the line}\par
+{\cf1\i # We can do so by using pos as a index for line}\par
+{\cf1\i # And we can represent a point with *}\par
+{\cf4\b for} i {\cf8\b in} {\cf4 range}({\cf7 10}):\par
+    {\cf4\b print}({\cf2 "}{\cf2 "}{\cf7 .}join(line))\par
+    line[pos] {\cf7 =} {\cf2 '}{\cf2 *}{\cf2 '}\par
+    pos {\cf7 +}{\cf7 =} velo\par
+\par
+{\cf4\b print}(pos)\par
+{\cf4\b print}({\cf2 "}{\cf2 "}{\cf7 .}join(line))\par
+\par
+{\cf1\i # But we have a problem}\par
+{\cf1\i # By the end of the loop, "ten" points are drawn when in fact we wanted only "one" to move}\par
+}

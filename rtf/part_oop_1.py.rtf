@@ -1,0 +1,23 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red0\green68\blue221;\red170\green34\blue255;\red25\green23\blue124;\red102\green102\blue102;\red0\green128\blue0;\red186\green33\blue33;\red0\green0\blue128;\red210\green65\blue58;\red128\green0\blue128;\red0\green0\blue255;\red64\green128\blue128;\red176\green0\blue64;\red255\green0\blue0;\red0\green160\blue0;\red187\green102\blue136;\red188\green122\blue0;\red153\green153\blue153;\red187\green102\blue34;\red125\green144\blue41;\red136\green0\blue0;\red136\green136\blue136;\red160\green0\blue0;\red187\green187\blue187;\red160\green160\blue0;}\f0 {\cf11\i # We can represent the concept of a point with a class}\par
+{\cf11\i # We have multiple variables assoicated with a point}\par
+{\cf11\i # Every point has a x and velo}\par
+{\cf5\b class} {\cf10\b Point}():\par
+    {\cf5\b def} {\cf10 __init__}({\cf5 self}, x, velo):\par
+        {\cf5 self}{\cf4 .}x {\cf4 =} x\par
+        {\cf5 self}{\cf4 .}velo {\cf4 =} velo\par
+\par
+line {\cf4 =} {\cf4 10}{\cf4 *}[{\cf6 '}{\cf6  }{\cf6 '}]\par
+\par
+point {\cf4 =} Point({\cf4 0},{\cf4 1})\par
+\par
+{\cf11\i # Note how point has an assoicated x and velo}\par
+{\cf11\i # We call the point's x with point.x}\par
+{\cf5\b for} i {\cf2\b in} {\cf5 range}({\cf4 10}):\par
+    line[point{\cf4 .}x] {\cf4 =} {\cf6 '}{\cf6 *}{\cf6 '}\par
+    {\cf5\b print}({\cf6 "}{\cf6 "}{\cf4 .}join(line))\par
+    line[point{\cf4 .}x] {\cf4 =} {\cf6 '}{\cf6  }{\cf6 '}\par
+\par
+    point{\cf4 .}x {\cf4 +}{\cf4 =} point{\cf4 .}velo\par
+\par
+{\cf5\b print}(point{\cf4 .}x, point{\cf4 .}velo)\par
+}

@@ -1,0 +1,45 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red210\green65\blue58;\red188\green122\blue0;\red0\green128\blue0;\red25\green23\blue124;\red0\green0\blue255;\red187\green102\blue136;\red64\green128\blue128;\red160\green0\blue0;\red187\green187\blue187;\red160\green160\blue0;\red176\green0\blue64;\red186\green33\blue33;\red255\green0\blue0;\red170\green34\blue255;\red102\green102\blue102;\red153\green153\blue153;\red136\green0\blue0;\red0\green68\blue221;\red187\green102\blue34;\red0\green0\blue128;\red136\green136\blue136;\red125\green144\blue41;\red0\green160\blue0;\red128\green0\blue128;}\f0 {\cf7\i # Without writing documentation we can also improve readbility}\par
+\par
+{\cf3\b class} {\cf5\b Point}():\par
+    {\cf3\b def} {\cf5 __init__}({\cf3 self}, x, velo):\par
+        {\cf3 self}{\cf15 .}x {\cf15 =} x\par
+        {\cf3 self}{\cf15 .}velo {\cf15 =} velo\par
+\par
+    {\cf3\b def} {\cf5 move}({\cf3 self}):\par
+        {\cf3 self}{\cf15 .}x {\cf15 +}{\cf15 =} {\cf3 self}{\cf15 .}velo\par
+\par
+    {\cf3\b def} {\cf5 print}({\cf3 self}):\par
+        {\cf3\b print}({\cf3 self}{\cf15 .}x, {\cf3 self}{\cf15 .}velo)\par
+\par
+{\cf3\b class} {\cf5\b Line}():\par
+    {\cf3\b def} {\cf5 __init__}({\cf3 self}, size, points{\cf15 =}{\cf3 None}):\par
+        {\cf3 self}{\cf15 .}line {\cf15 =} size{\cf15 *}[{\cf12 '}{\cf12  }{\cf12 '}]\par
+\par
+        {\cf3\b if} points {\cf14\b is} {\cf3 None}:\par
+            {\cf3 self}{\cf15 .}points {\cf15 =} []\par
+        {\cf3 self}{\cf15 .}points {\cf15 =} points\par
+\par
+    {\cf3\b def} {\cf5 step}({\cf3 self}):\par
+        {\cf3\b for} point {\cf14\b in} {\cf3 self}{\cf15 .}points:\par
+            point{\cf15 .}move()\par
+\par
+    {\cf3\b def} {\cf5 draw}({\cf3 self}):\par
+        {\cf3\b for} point {\cf14\b in} {\cf3 self}{\cf15 .}points:\par
+            {\cf3 self}{\cf15 .}line[point{\cf15 .}x] {\cf15 =} {\cf12 '}{\cf12 *}{\cf12 '}\par
+\par
+        {\cf3\b print}({\cf12 "}{\cf12 "}{\cf15 .}join({\cf3 self}{\cf15 .}line))\par
+\par
+        {\cf3\b for} point {\cf14\b in} {\cf3 self}{\cf15 .}points:\par
+            {\cf3 self}{\cf15 .}line[point{\cf15 .}x] {\cf15 =} {\cf12 '}{\cf12  }{\cf12 '}\par
+\par
+line {\cf15 =} Line({\cf15 10}, [Point({\cf15 0},{\cf15 1}), Point({\cf15 9},{\cf15 -}{\cf15 1})])\par
+\par
+{\cf7\i # note how the code is much more readable}\par
+{\cf7\i # common behavior is written in classes}\par
+{\cf3\b for} i {\cf14\b in} {\cf3 range}({\cf15 10}):\par
+    line{\cf15 .}draw()\par
+    line{\cf15 .}step()\par
+\par
+{\cf3\b for} point {\cf14\b in} line{\cf15 .}points:\par
+    point{\cf15 .}{\cf3\b print}()\par
+}

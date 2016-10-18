@@ -1,0 +1,23 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red255\green0\blue0;\red0\green128\blue0;\red64\green128\blue128;\red102\green102\blue102;\red136\green0\blue0;\red160\green0\blue0;\red186\green33\blue33;\red210\green65\blue58;\red160\green160\blue0;\red25\green23\blue124;\red170\green34\blue255;\red0\green0\blue128;\red188\green122\blue0;\red187\green102\blue136;\red136\green136\blue136;\red0\green0\blue255;\red0\green68\blue221;\red153\green153\blue153;\red128\green0\blue128;\red176\green0\blue64;\red187\green187\blue187;\red187\green102\blue34;\red125\green144\blue41;\red0\green160\blue0;}\f0 {\cf3\i # Tuples are immutable}\par
+{\cf3\i # You cannot change them once you define them}\par
+{\cf3\i # Meaning that if pos is a tuple, we can't update the pos}\par
+\par
+{\cf3\i # But we can fix that with lists}\par
+pos {\cf4 =} [{\cf4 0},{\cf4 0}]\par
+velo {\cf4 =} [{\cf4 1},{\cf4 1}]\par
+\par
+{\cf2\b print}(pos, velo)\par
+\par
+{\cf3\i # Much like tuples, we get numbers by indexing}\par
+{\cf2\b print}(pos[{\cf4 0}])\par
+{\cf2\b print}(pos[{\cf4 1}])\par
+\par
+{\cf3\i # Now we can modify pos as a pair of numbers}\par
+{\cf3\i # Unforturately its not very readable}\par
+{\cf2\b for} i {\cf11\b in} {\cf2 range}({\cf4 10}):\par
+    {\cf2\b print}(pos)\par
+    pos[{\cf4 0}] {\cf4 +}{\cf4 =} velo[{\cf4 0}]\par
+    pos[{\cf4 1}] {\cf4 +}{\cf4 =} velo[{\cf4 1}]\par
+\par
+{\cf2\b print}(pos)\par
+}

@@ -1,0 +1,28 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red102\green102\blue102;\red153\green153\blue153;\red64\green128\blue128;\red128\green0\blue128;\red0\green68\blue221;\red0\green128\blue0;\red186\green33\blue33;\red0\green0\blue255;\red25\green23\blue124;\red160\green160\blue0;\red210\green65\blue58;\red188\green122\blue0;\red187\green102\blue34;\red0\green160\blue0;\red187\green102\blue136;\red0\green0\blue128;\red160\green0\blue0;\red187\green187\blue187;\red125\green144\blue41;\red170\green34\blue255;\red176\green0\blue64;\red255\green0\blue0;\red136\green136\blue136;\red136\green0\blue0;}\f0 {\cf3\i # Lets attempt to draw two points and have them move also}\par
+\par
+pos_1 {\cf1 =} {\cf1 0}\par
+velo_1 {\cf1 =} {\cf1 1}\par
+\par
+pos_2 {\cf1 =} {\cf1 9}\par
+velo_2 {\cf1 =} {\cf1 -}{\cf1 1}\par
+\par
+line {\cf1 =} {\cf1 10}{\cf1 *}[{\cf7 '}{\cf7  }{\cf7 '}]\par
+\par
+{\cf3\i # The code is beginning to be clustered and hard to read}\par
+{\cf6\b for} i {\cf20\b in} {\cf6 range}({\cf1 10}):\par
+    line[pos_1] {\cf1 =} {\cf7 '}{\cf7 *}{\cf7 '}\par
+    line[pos_2] {\cf1 =} {\cf7 '}{\cf7 *}{\cf7 '}\par
+    {\cf6\b print}({\cf7 "}{\cf7 "}{\cf1 .}join(line))\par
+    line[pos_1] {\cf1 =} {\cf7 '}{\cf7  }{\cf7 '}\par
+    line[pos_2] {\cf1 =} {\cf7 '}{\cf7  }{\cf7 '}\par
+\par
+    pos_1 {\cf1 +}{\cf1 =} velo_1\par
+    pos_2 {\cf1 +}{\cf1 =} velo_2\par
+\par
+{\cf3\i # Note that if we used the pos now to index the line, we would get errors or wrong behavior}\par
+{\cf6\b print}(pos_1, pos_2)\par
+{\cf6\b print}({\cf7 "}{\cf7 "}{\cf1 .}join(line))\par
+\par
+{\cf3\i # This is going to become extremely problematic if we try to go beyond this}\par
+{\cf3\i # If we wanted to add more points or dimensions, the code will quickly degrade`}\par
+}

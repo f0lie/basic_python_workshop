@@ -1,0 +1,14 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red0\green128\blue0;\red187\green102\blue136;\red0\green0\blue255;\red102\green102\blue102;\red64\green128\blue128;\red255\green0\blue0;\red186\green33\blue33;\red0\green160\blue0;\red210\green65\blue58;\red0\green0\blue128;\red136\green136\blue136;\red25\green23\blue124;\red176\green0\blue64;\red187\green187\blue187;\red188\green122\blue0;\red160\green160\blue0;\red170\green34\blue255;\red160\green0\blue0;\red0\green68\blue221;\red187\green102\blue34;\red136\green0\blue0;\red153\green153\blue153;\red125\green144\blue41;\red128\green0\blue128;}\f0 {\cf5\i # Let's try to draw a point moving on a line}\par
+{\cf5\i # To make things simple, we are going back to 1D}\par
+\par
+{\cf5\i # Since there are multiple positions at a time, we can represent as a list}\par
+line_1 {\cf4 =} [{\cf7 '}{\cf7  }{\cf7 '}, {\cf7 '}{\cf7  }{\cf7 '}, {\cf7 '}{\cf7  }{\cf7 '}]\par
+line_2 {\cf4 =} {\cf4 3}{\cf4 *}[{\cf7 '}{\cf7  }{\cf7 '}]\par
+\par
+{\cf5\i # Note how they are equal statements}\par
+{\cf1\b print}(line_1, line_2)\par
+\par
+{\cf5\i # If we wanted to print the line without the list notation}\par
+{\cf5\i # We can join an empty string with a list}\par
+{\cf1\b print}({\cf7 "}{\cf7 "}{\cf4 .}join(line_1))\par
+}

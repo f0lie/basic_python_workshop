@@ -1,0 +1,18 @@
+{\rtf1\ansi\uc0\deff0{\fonttbl{\f0\fmodern\fprq1\fcharset0;}}{\colortbl;\red0\green128\blue0;\red170\green34\blue255;\red186\green33\blue33;\red0\green68\blue221;\red0\green0\blue255;\red153\green153\blue153;\red25\green23\blue124;\red187\green187\blue187;\red0\green0\blue128;\red64\green128\blue128;\red188\green122\blue0;\red255\green0\blue0;\red210\green65\blue58;\red160\green160\blue0;\red102\green102\blue102;\red136\green0\blue0;\red128\green0\blue128;\red176\green0\blue64;\red187\green102\blue136;\red0\green160\blue0;\red136\green136\blue136;\red160\green0\blue0;\red125\green144\blue41;\red187\green102\blue34;}\f0 pos {\cf15 =} {\cf15 0}\par
+velo {\cf15 =} {\cf15 1}\par
+\par
+line {\cf15 =} {\cf15 10}{\cf15 *}[{\cf3 '}{\cf3  }{\cf3 '}]\par
+\par
+{\cf1\b for} i {\cf2\b in} {\cf1 range}({\cf15 10}):\par
+    {\cf10\i # We draw a point on the line and erase it after printing it}\par
+    line[pos] {\cf15 =} {\cf3 '}{\cf3 *}{\cf3 '}\par
+    {\cf1\b print}({\cf3 "}{\cf3 "}{\cf15 .}join(line))\par
+    line[pos] {\cf15 =} {\cf3 '}{\cf3  }{\cf3 '}\par
+\par
+    pos {\cf15 +}{\cf15 =} velo\par
+\par
+{\cf10\i # Now we have drawn a point moving through a line}\par
+{\cf10\i # Thou the line at the end is end}\par
+{\cf1\b print}(pos)\par
+{\cf1\b print}({\cf3 "}{\cf3 "}{\cf15 .}join(line))\par
+}
